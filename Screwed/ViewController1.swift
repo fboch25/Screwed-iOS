@@ -13,8 +13,8 @@ import CoreLocation
 class ViewController1: UIViewController, LocationManagerDelegate{
     
     @IBOutlet weak var Map: MKMapView!
+    @IBOutlet weak var currentLoc: UIButton!
     var locationManager = LocationManager.sharedInstance
-    var activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0,0, 50, 50)) as UIActivityIndicatorView
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +31,6 @@ class ViewController1: UIViewController, LocationManagerDelegate{
             }
         }
         
-        loadCurrentLocation()
-        
 //        locationManager.stopUpdatingLocation()
     }
     
@@ -41,8 +39,10 @@ class ViewController1: UIViewController, LocationManagerDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    func loadCurrentLocation() {
+    @IBAction func findCurrentLoc(sender: AnyObject) {
+        println("clicked!")
         locationManager.startUpdatingLocationWithCompletionHandler { (latitude, longitude, status, verboseMessage, error) -> () in
+            println("passed")
             if error != nil {
                 println(error)
             } else {
@@ -50,7 +50,7 @@ class ViewController1: UIViewController, LocationManagerDelegate{
             }
         }
     }
-    
+        
     func locationManagerStatus(status:NSString){
         
         println(status)
@@ -124,6 +124,7 @@ class ViewController1: UIViewController, LocationManagerDelegate{
         self.Map?.setRegion(theRegion, animated: true)
         
         self.Map?.addAnnotation(MKPlacemark(placemark: placemark))
+        println("here")
     }
         
     

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VPI-Hm-QjT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Item 2-->
@@ -36,37 +37,133 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Screwed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udc-io-nbP">
-                                <rect key="frame" x="153" y="5" width="108" height="33"/>
+                            <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screwed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udc-io-nbP">
+                                <rect key="frame" x="98" y="20" width="219" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oh Shoot I Forgot..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sci-PS-ezi">
-                                <rect key="frame" x="16" y="46" width="169" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oh Shoot I Forgot..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sci-PS-ezi">
+                                <rect key="frame" x="0.0" y="66" width="167" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qCU-qv-6iI">
-                                <rect key="frame" x="191" y="38" width="216" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="He1-Ko-CSM">
+                                <rect key="frame" x="147" y="657" width="121" height="30"/>
+                                <state key="normal" title="Current Location">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="findCurrentLoc:" destination="m4z-l1-tEV" eventType="touchUpInside" id="76P-AZ-GnC"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hen-Q7-mvH">
+                                <rect key="frame" x="0.0" y="108" width="414" height="550"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qCU-qv-6iI">
+                                <rect key="frame" x="174" y="56" width="224" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hen-Q7-mvH">
-                                <rect key="frame" x="0.0" y="82" width="414" height="613"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hen-Q7-mvH" secondAttribute="trailing" constant="-16" id="096-rk-52b"/>
+                            <constraint firstItem="hen-Q7-mvH" firstAttribute="top" secondItem="qCU-qv-6iI" secondAttribute="bottom" constant="8" id="1dF-LQ-Et5"/>
+                            <constraint firstItem="hen-Q7-mvH" firstAttribute="top" secondItem="sci-PS-ezi" secondAttribute="bottom" constant="19" id="1f1-ch-QZQ"/>
+                            <constraint firstItem="qCU-qv-6iI" firstAttribute="top" secondItem="Udc-io-nbP" secondAttribute="bottom" constant="6" id="2qK-Sy-8K9"/>
+                            <constraint firstItem="hen-Q7-mvH" firstAttribute="top" secondItem="qCU-qv-6iI" secondAttribute="bottom" constant="8" id="3KY-a8-aYX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Udc-io-nbP" secondAttribute="trailing" constant="137" id="6cb-rA-h4S"/>
+                            <constraint firstItem="Udc-io-nbP" firstAttribute="leading" secondItem="DKa-om-SDa" secondAttribute="leadingMargin" constant="82" id="8HQ-pK-1nI"/>
+                            <constraint firstItem="qCU-qv-6iI" firstAttribute="top" secondItem="Udc-io-nbP" secondAttribute="bottom" id="ARM-pL-p9E"/>
+                            <constraint firstAttribute="centerX" secondItem="qCU-qv-6iI" secondAttribute="centerX" constant="-79" id="C6W-wy-JZb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hen-Q7-mvH" secondAttribute="trailing" constant="-16" id="ENO-jn-tew"/>
+                            <constraint firstItem="qCU-qv-6iI" firstAttribute="leading" secondItem="sci-PS-ezi" secondAttribute="trailing" constant="7" id="Fpd-De-8fM"/>
+                            <constraint firstItem="Udc-io-nbP" firstAttribute="top" secondItem="DKa-om-SDa" secondAttribute="top" constant="20" id="GM5-Iv-c0B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qCU-qv-6iI" secondAttribute="trailing" id="GuE-1X-ZqZ"/>
+                            <constraint firstItem="hen-Q7-mvH" firstAttribute="leading" secondItem="DKa-om-SDa" secondAttribute="leadingMargin" constant="-16" id="HEF-uc-Gwo"/>
+                            <constraint firstItem="He1-Ko-CSM" firstAttribute="top" secondItem="hen-Q7-mvH" secondAttribute="bottom" constant="8" id="HMh-cF-49S"/>
+                            <constraint firstAttribute="trailing" secondItem="hen-Q7-mvH" secondAttribute="trailing" id="Ht8-Km-HdG"/>
+                            <constraint firstItem="hen-Q7-mvH" firstAttribute="top" secondItem="qCU-qv-6iI" secondAttribute="bottom" constant="8" id="IH0-YU-g95"/>
+                            <constraint firstItem="He1-Ko-CSM" firstAttribute="leading" secondItem="DKa-om-SDa" secondAttribute="leadingMargin" constant="131" id="JKP-0c-6S0"/>
+                            <constraint firstAttribute="centerX" secondItem="He1-Ko-CSM" secondAttribute="centerX" id="KSP-dV-VSf"/>
+                            <constraint firstItem="etX-Zw-F8F" firstAttribute="top" secondItem="He1-Ko-CSM" secondAttribute="bottom" constant="13" id="KYn-Cg-AFK"/>
+                            <constraint firstItem="etX-Zw-F8F" firstAttribute="top" secondItem="He1-Ko-CSM" secondAttribute="bottom" constant="10" id="Kyx-xR-0bA"/>
+                            <constraint firstItem="hen-Q7-mvH" firstAttribute="leading" secondItem="DKa-om-SDa" secondAttribute="leadingMargin" constant="-16" id="LT4-Ow-iC5"/>
+                            <constraint firstItem="hen-Q7-mvH" firstAttribute="top" secondItem="qCU-qv-6iI" secondAttribute="bottom" constant="8" id="OeC-qj-4c2"/>
+                            <constraint firstItem="qCU-qv-6iI" firstAttribute="top" secondItem="Udc-io-nbP" secondAttribute="bottom" id="OkQ-e1-ktN"/>
+                            <constraint firstItem="Udc-io-nbP" firstAttribute="leading" secondItem="DKa-om-SDa" secondAttribute="leadingMargin" constant="82" id="P98-bK-DEM"/>
+                            <constraint firstItem="etX-Zw-F8F" firstAttribute="top" secondItem="He1-Ko-CSM" secondAttribute="bottom" id="QGP-Pn-Cdb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Udc-io-nbP" secondAttribute="trailing" constant="81" id="QQI-OT-ZUL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qCU-qv-6iI" secondAttribute="trailing" id="RRt-gl-i85"/>
+                            <constraint firstItem="He1-Ko-CSM" firstAttribute="top" secondItem="hen-Q7-mvH" secondAttribute="bottom" constant="-1" id="USn-hK-U9z"/>
+                            <constraint firstItem="He1-Ko-CSM" firstAttribute="top" secondItem="hen-Q7-mvH" secondAttribute="bottom" constant="8" id="Z9p-Hp-dC1"/>
+                            <constraint firstItem="hen-Q7-mvH" firstAttribute="leading" secondItem="DKa-om-SDa" secondAttribute="leading" id="ZRB-tW-oYB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Udc-io-nbP" secondAttribute="trailing" constant="137" id="a7H-2N-SW4"/>
+                            <constraint firstItem="Udc-io-nbP" firstAttribute="leading" secondItem="DKa-om-SDa" secondAttribute="leadingMargin" constant="137" id="aaa-TT-c2p"/>
+                            <constraint firstItem="qCU-qv-6iI" firstAttribute="leading" secondItem="sci-PS-ezi" secondAttribute="trailing" constant="7" id="bkx-dH-Bdn"/>
+                            <constraint firstItem="Udc-io-nbP" firstAttribute="centerX" secondItem="hen-Q7-mvH" secondAttribute="centerX" id="ebZ-vq-47z"/>
+                            <constraint firstAttribute="centerX" secondItem="Udc-io-nbP" secondAttribute="centerX" id="egt-XP-3QB"/>
+                            <constraint firstItem="Udc-io-nbP" firstAttribute="top" secondItem="DKa-om-SDa" secondAttribute="topMargin" constant="5" id="ffd-nT-JK2"/>
+                            <constraint firstItem="qCU-qv-6iI" firstAttribute="top" secondItem="Udc-io-nbP" secondAttribute="bottom" id="guc-DN-tSU"/>
+                            <constraint firstItem="Udc-io-nbP" firstAttribute="top" secondItem="DKa-om-SDa" secondAttribute="topMargin" constant="10" id="kva-jh-iLP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qCU-qv-6iI" secondAttribute="trailing" id="lVn-yJ-hGX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="He1-Ko-CSM" secondAttribute="trailing" constant="130" id="lcD-8i-Gga"/>
+                            <constraint firstItem="He1-Ko-CSM" firstAttribute="top" secondItem="hen-Q7-mvH" secondAttribute="bottom" constant="8" id="lq2-9S-Zmz"/>
+                            <constraint firstAttribute="centerX" secondItem="He1-Ko-CSM" secondAttribute="centerX" id="mLu-t7-9rn"/>
+                            <constraint firstItem="Udc-io-nbP" firstAttribute="top" secondItem="DKa-om-SDa" secondAttribute="topMargin" constant="5" id="mQ7-jA-QYC"/>
+                            <constraint firstAttribute="centerX" secondItem="Udc-io-nbP" secondAttribute="centerX" id="nU0-hA-ahe"/>
+                            <constraint firstItem="He1-Ko-CSM" firstAttribute="top" secondItem="hen-Q7-mvH" secondAttribute="bottom" constant="8" id="sXN-dD-pzY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hen-Q7-mvH" secondAttribute="trailing" constant="-16" id="tvf-BD-lKH"/>
+                            <constraint firstAttribute="centerX" secondItem="Udc-io-nbP" secondAttribute="centerX" id="umL-Nn-c0t"/>
+                            <constraint firstItem="sci-PS-ezi" firstAttribute="leading" secondItem="DKa-om-SDa" secondAttribute="leadingMargin" constant="-16" id="uvi-GE-10b"/>
+                            <constraint firstItem="sci-PS-ezi" firstAttribute="top" secondItem="Udc-io-nbP" secondAttribute="bottom" constant="8" id="wzX-5Z-FHU"/>
+                            <constraint firstItem="qCU-qv-6iI" firstAttribute="leading" secondItem="sci-PS-ezi" secondAttribute="trailing" constant="7" id="xFt-Bw-jiL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Udc-io-nbP" secondAttribute="trailing" constant="137" id="xZP-Jp-c99"/>
+                            <constraint firstItem="Udc-io-nbP" firstAttribute="leading" secondItem="DKa-om-SDa" secondAttribute="leadingMargin" constant="137" id="xmz-Md-b2z"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6cb-rA-h4S"/>
+                                <exclude reference="8HQ-pK-1nI"/>
+                                <exclude reference="QQI-OT-ZUL"/>
+                                <exclude reference="a7H-2N-SW4"/>
+                                <exclude reference="aaa-TT-c2p"/>
+                                <exclude reference="egt-XP-3QB"/>
+                                <exclude reference="ffd-nT-JK2"/>
+                                <exclude reference="kva-jh-iLP"/>
+                                <exclude reference="mQ7-jA-QYC"/>
+                                <exclude reference="nU0-hA-ahe"/>
+                                <exclude reference="umL-Nn-c0t"/>
+                                <exclude reference="xZP-Jp-c99"/>
+                                <exclude reference="xmz-Md-b2z"/>
+                                <exclude reference="ARM-pL-p9E"/>
+                                <exclude reference="OkQ-e1-ktN"/>
+                                <exclude reference="guc-DN-tSU"/>
+                                <exclude reference="wzX-5Z-FHU"/>
+                                <exclude reference="HMh-cF-49S"/>
+                                <exclude reference="JKP-0c-6S0"/>
+                                <exclude reference="KSP-dV-VSf"/>
+                                <exclude reference="Z9p-Hp-dC1"/>
+                                <exclude reference="lcD-8i-Gga"/>
+                                <exclude reference="lq2-9S-Zmz"/>
+                                <exclude reference="sXN-dD-pzY"/>
+                                <exclude reference="KYn-Cg-AFK"/>
+                                <exclude reference="Kyx-xR-0bA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="HnA-dg-QHB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="Map" destination="hen-Q7-mvH" id="5aE-qY-lsT"/>
+                        <outlet property="currentLoc" destination="He1-Ko-CSM" id="ehZ-RF-zn8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvt-iv-ae6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1654" y="110"/>
+            <point key="canvasLocation" x="1648" y="-67"/>
         </scene>
         <!--My Tab Bar Controller-->
         <scene sceneID="ow4-2W-Dco">
