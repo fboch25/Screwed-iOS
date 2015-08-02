@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270B7BC71B6DDFD100828EE9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270B7BC61B6DDFD100828EE9 /* MapKit.framework */; };
+		275462D21B6DB0470044DCBD /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275462D11B6DB0470044DCBD /* MyTabBarController.swift */; };
+		275462D41B6DB5090044DCBD /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275462D31B6DB5090044DCBD /* ViewController1.swift */; };
+		275462D61B6DB54A0044DCBD /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275462D51B6DB54A0044DCBD /* ViewController2.swift */; };
+		27FA31AC1B6DD8AB007B9E8B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA31AB1B6DD8AB007B9E8B /* LocationManager.swift */; };
 		FCCC7C121B6D8E1B00A4E05B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC7C111B6D8E1B00A4E05B /* AppDelegate.swift */; };
-		FCCC7C141B6D8E1B00A4E05B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC7C131B6D8E1B00A4E05B /* ViewController.swift */; };
 		FCCC7C171B6D8E1B00A4E05B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCC7C151B6D8E1B00A4E05B /* Main.storyboard */; };
 		FCCC7C191B6D8E1B00A4E05B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCC7C181B6D8E1B00A4E05B /* Images.xcassets */; };
 		FCCC7C1C1B6D8E1B00A4E05B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCCC7C1A1B6D8E1B00A4E05B /* LaunchScreen.xib */; };
@@ -26,10 +30,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		270B7BC61B6DDFD100828EE9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		275462D11B6DB0470044DCBD /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
+		275462D31B6DB5090044DCBD /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		275462D51B6DB54A0044DCBD /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		27FA31AB1B6DD8AB007B9E8B /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FCCC7C0C1B6D8E1B00A4E05B /* Screwed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Screwed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCC7C101B6D8E1B00A4E05B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCC7C111B6D8E1B00A4E05B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCCC7C131B6D8E1B00A4E05B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FCCC7C161B6D8E1B00A4E05B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCCC7C181B6D8E1B00A4E05B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FCCC7C1B1B6D8E1B00A4E05B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270B7BC71B6DDFD100828EE9 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +68,7 @@
 		FCCC7C031B6D8E1B00A4E05B = {
 			isa = PBXGroup;
 			children = (
+				270B7BC61B6DDFD100828EE9 /* MapKit.framework */,
 				FCCC7C0E1B6D8E1B00A4E05B /* Screwed */,
 				FCCC7C241B6D8E1C00A4E05B /* ScrewedTests */,
 				FCCC7C0D1B6D8E1B00A4E05B /* Products */,
@@ -78,8 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				FCCC7C111B6D8E1B00A4E05B /* AppDelegate.swift */,
-				FCCC7C131B6D8E1B00A4E05B /* ViewController.swift */,
 				FCCC7C151B6D8E1B00A4E05B /* Main.storyboard */,
+				275462D51B6DB54A0044DCBD /* ViewController2.swift */,
+				275462D31B6DB5090044DCBD /* ViewController1.swift */,
+				275462D11B6DB0470044DCBD /* MyTabBarController.swift */,
+				27FA31AB1B6DD8AB007B9E8B /* LocationManager.swift */,
 				FCCC7C181B6D8E1B00A4E05B /* Images.xcassets */,
 				FCCC7C1A1B6D8E1B00A4E05B /* LaunchScreen.xib */,
 				FCCC7C0F1B6D8E1B00A4E05B /* Supporting Files */,
@@ -212,7 +225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCCC7C141B6D8E1B00A4E05B /* ViewController.swift in Sources */,
+				275462D41B6DB5090044DCBD /* ViewController1.swift in Sources */,
+				275462D61B6DB54A0044DCBD /* ViewController2.swift in Sources */,
+				27FA31AC1B6DD8AB007B9E8B /* LocationManager.swift in Sources */,
+				275462D21B6DB0470044DCBD /* MyTabBarController.swift in Sources */,
 				FCCC7C121B6D8E1B00A4E05B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +425,7 @@
 				FCCC7C2D1B6D8E1C00A4E05B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCCC7C2E1B6D8E1C00A4E05B /* Build configuration list for PBXNativeTarget "ScrewedTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +434,7 @@
 				FCCC7C301B6D8E1C00A4E05B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

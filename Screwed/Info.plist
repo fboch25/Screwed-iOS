@@ -36,5 +36,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This notification shows for always use</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Just press OK or rot in hell</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This notification shows for when in use</string>
 </dict>
 </plist>

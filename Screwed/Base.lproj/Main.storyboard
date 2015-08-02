@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VPI-Hm-QjT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--Item 2-->
         <scene sceneID="282-Ua-K0f">
             <objects>
-                <viewController id="LbD-ah-7Yx" sceneMemberID="viewController">
+                <viewController id="LbD-ah-7Yx" customClass="ViewController2" customModule="Screwed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="olI-GL-AN8"/>
                         <viewControllerLayoutGuide type="bottom" id="HI9-Ey-JnR"/>
@@ -27,7 +27,7 @@
         <!--Item 1-->
         <scene sceneID="pTT-vh-Nyh">
             <objects>
-                <viewController id="m4z-l1-tEV" sceneMemberID="viewController">
+                <viewController id="m4z-l1-tEV" customClass="ViewController1" customModule="Screwed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gja-Xi-Syk"/>
                         <viewControllerLayoutGuide type="bottom" id="etX-Zw-F8F"/>
@@ -60,15 +60,18 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="HnA-dg-QHB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="Map" destination="hen-Q7-mvH" id="5aE-qY-lsT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvt-iv-ae6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1654" y="110"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--My Tab Bar Controller-->
         <scene sceneID="ow4-2W-Dco">
             <objects>
-                <tabBarController id="VPI-Hm-QjT" sceneMemberID="viewController">
+                <tabBarController id="VPI-Hm-QjT" customClass="MyTabBarController" customModule="Screwed" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="lca-JW-RRT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
