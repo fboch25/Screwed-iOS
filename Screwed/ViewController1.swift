@@ -14,6 +14,7 @@ class ViewController1: UIViewController, LocationManagerDelegate{
     
     @IBOutlet weak var Map: MKMapView!
     @IBOutlet weak var currentLoc: UIButton!
+    @IBOutlet weak var tab1: UITabBarItem!
     var locationManager = LocationManager.sharedInstance
     
     override func viewDidLoad() {
@@ -22,6 +23,7 @@ class ViewController1: UIViewController, LocationManagerDelegate{
         // Do any additional setup after loading the view.
         
         locationManager.delegate = self
+        self.view.backgroundColor = UIColor.blackColor()
         
         locationManager.startUpdatingLocationWithCompletionHandler { (latitude, longitude, status, verboseMessage, error) -> () in
             if error != nil {
@@ -40,9 +42,7 @@ class ViewController1: UIViewController, LocationManagerDelegate{
     }
     
     @IBAction func findCurrentLoc(sender: AnyObject) {
-        println("clicked!")
         locationManager.startUpdatingLocationWithCompletionHandler { (latitude, longitude, status, verboseMessage, error) -> () in
-            println("passed")
             if error != nil {
                 println(error)
             } else {
@@ -124,7 +124,6 @@ class ViewController1: UIViewController, LocationManagerDelegate{
         self.Map?.setRegion(theRegion, animated: true)
         
         self.Map?.addAnnotation(MKPlacemark(placemark: placemark))
-        println("here")
     }
         
     
